@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O Caminho — Série de Livros</title>
+  <meta name="description" content="O Caminho é uma série de livros que ajuda pessoas a darem passos importantes na vida: crescimento pessoal, autoestima, relacionamentos e inteligência emocional.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <a href="#inicio" class="marca">O Caminho</a>
+    <nav>
+      <a href="#serie">A Série</a>
+      <a href="#livros">Livros</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-conteudo">
+        <p class="sobretitulo">Uma série de livros</p>
+        <h1>O Caminho</h1>
+        <p class="lema">Passos importantes para a sua vida começam com uma decisão.</p>
+        <a href="#livros" class="botao">Conheça os livros</a>
+      </div>
+      <svg class="trilha" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,170 C250,120 400,190 650,130 C850,85 1000,140 1200,60" />
+      </svg>
+    </section>
+
+    <section id="serie" class="serie">
+      <div class="container">
+        <h2>Sobre a série</h2>
+        <p class="introducao">
+          <strong>O Caminho</strong> é uma série de livros que tem por objetivo ajudar as pessoas
+          a darem passos importantes na sua vida. Cada obra é um convite para olhar para dentro,
+          enfrentar desafios e avançar com mais clareza, coragem e propósito.
+        </p>
+
+        <ul class="pilares">
+          <li>
+            <span class="icone" aria-hidden="true">↗</span>
+            <h3>Crescimento pessoal</h3>
+            <p>Descobrir o próprio potencial e transformá-lo em atitude.</p>
+          </li>
+          <li>
+            <span class="icone" aria-hidden="true">✦</span>
+            <h3>Autoestima</h3>
+            <p>Reconhecer o seu valor e caminhar com confiança.</p>
+          </li>
+          <li>
+            <span class="icone" aria-hidden="true">∞</span>
+            <h3>Relacionamentos</h3>
+            <p>Construir laços mais saudáveis, sinceros e duradouros.</p>
+          </li>
+          <li>
+            <span class="icone" aria-hidden="true">◎</span>
+            <h3>Inteligência emocional</h3>
+            <p>Compreender as emoções e agir com equilíbrio.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="livros" class="livros">
+      <div class="container">
+        <h2>Os livros</h2>
+        <p class="subtitulo-secao">Cada título, um novo passo na caminhada.</p>
+
+        <ol class="estante">
+          <li class="livro cor-1"><span class="numero">01</span><h3>De Pé Perante Leões</h3></li>
+          <li class="livro cor-2"><span class="numero">02</span><h3>Atravesse a Sua Ponte</h3></li>
+          <li class="livro cor-3"><span class="numero">03</span><h3>Não Deixe Seus Sonhos Serem Enterrados</h3></li>
+          <li class="livro cor-4"><span class="numero">04</span><h3>Abra o Seu Presente</h3></li>
+          <li class="livro cor-5"><span class="numero">05</span><h3>Entre Letras e Códigos</h3></li>
+          <li class="livro cor-6"><span class="numero">06</span><h3>Ephifania</h3></li>
+          <li class="livro cor-7"><span class="numero">07</span><h3>Paulo, o Apóstolo por Trás das Cartas</h3></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p class="marca">O Caminho</p>
+    <p>© <span id="ano">2026</span> Série O Caminho. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+</body>
+</html>
