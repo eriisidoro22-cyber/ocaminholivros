@@ -73,7 +73,16 @@
         <p class="subtitulo-secao">Cada título, um novo passo na caminhada.</p>
 
         <ol class="estante">
-          <li class="livro cor-1"><span class="numero">01</span><h3>De Pé Perante Leões</h3></li>
+          <li class="livro cor-1 com-sinopse" tabindex="0" aria-expanded="false" aria-label="De Pé Perante Leões — toque para ver a sinopse">
+            <span class="numero">01</span><h3>De Pé Perante Leões</h3>
+            <span class="dica" aria-hidden="true">Ver sinopse</span>
+            <div class="sinopse">
+              <p class="sinopse-titulo">Sinopse</p>
+              <p>E se você pudesse atravessar o tempo e acordar na Babilônia ao lado de Daniel e seus amigos?</p>
+              <p>Nesse romance, você vive de perto a coragem deles diante do rei Nabucodonosor, da fornalha de fogo e da cova dos leões.</p>
+              <p>Ao fim de cada cena, uma reflexão para a sua vida e 3 passos simples para levar essa fé para o seu dia a dia.</p>
+            </div>
+          </li>
           <li class="livro cor-2"><span class="numero">02</span><h3>Atravesse a Sua Ponte</h3></li>
           <li class="livro cor-3"><span class="numero">03</span><h3>Não Deixe Seus Sonhos Serem Enterrados</h3></li>
           <li class="livro cor-4"><span class="numero">04</span><h3>Abra o Seu Presente</h3></li>
@@ -90,6 +99,21 @@
     <p>© <span id="ano">2026</span> Série O Caminho. Todos os direitos reservados.</p>
   </footer>
 
-  <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+
+    // Sinopses: abre/fecha ao clicar ou tocar na capa (o hover é tratado no CSS)
+    document.querySelectorAll('.livro.com-sinopse').forEach(function (livro) {
+      function alternar() {
+        var aberto = livro.classList.toggle('aberto');
+        livro.setAttribute('aria-expanded', aberto);
+      }
+      livro.addEventListener('click', alternar);
+      livro.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); alternar(); }
+        if (e.key === 'Escape') { livro.classList.remove('aberto'); livro.setAttribute('aria-expanded', false); }
+      });
+    });
+  </script>
 </body>
 </html>
